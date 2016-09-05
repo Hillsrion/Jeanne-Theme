@@ -31,7 +31,7 @@ gulp.task('minify-css', ['less'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/creative.js')
+    return gulp.src('js/app.js')
         .pipe(uglify())
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
