@@ -1,0 +1,54 @@
+.header {
+  margin: 0;
+  width: 100%;
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .main-nav {
+    margin: 0;
+    &__list {
+      padding: 10px 20px 0 0;
+      margin: 0;
+    }
+    &__item {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      a {
+        color: inherit;
+        outline: 0;
+        text-transform: none;
+        color: white;
+        font-size: 14px;
+      }
+      &::before {
+        content: '';
+      }
+    }
+  }
+}
+
+.front-cover {
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  &__name {
+    font-size: 40px;
+    margin: 0 0 20px 0;
+  }
+  &__job {
+    font-size: 35px;
+    margin: 0;
+  }
+}

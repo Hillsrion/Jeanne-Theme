@@ -7,15 +7,21 @@
 <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/app.css">
 </head>
 <body <?php body_class(); ?>>
-    <header class="row header">
-        <div class="col-xs">
-            <nav class="row main__nav">
-                <ul class="col-xs main-nav__list">
-                    <li class="main-nav__item"><a href="">À propos de moi</a></li>
-                    <li class="main-nav__item"><a href="">Mes services</a></li>
-                    <li class="main-nav__item"><a href="">Commissions</a></li>
-                    <li class="main-nav__item"><a href="">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <? //if(is_front_page()): ?>
+    <header class="header header--absolute">
+        <nav class="main__nav">
+            <ul class="row end-xs main-nav__list">
+                <li class="main-nav__item"><a href="">À propos de moi</a></li>
+                <li class="main-nav__item"><a href="">Mes services</a></li>
+                <li class="main-nav__item"><a href="">Commissions</a></li>
+                <li class="main-nav__item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    <?php $cover = get_theme_root_uri().'/Jeanne/images/cover_home.jpg'?>
+    <div class="row front-cover" style="background-image: url('<?php echo $cover ?>')">
+        <h2 class="front-cover__name">Jeanne Plounevez</h2>
+        <h3 class="front-cover__job">Dessinatrice Freelance</h3>
+    </div>
+    <!-- end is_front_page -->
+    <? //endif ?>
