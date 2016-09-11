@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/app.css">
 </head>
 <body <?php body_class(); ?>>
-    <? //if(is_front_page()): ?>
+    <?php if(is_front_page()) { ?>
     <header class="header header--absolute">
         <nav class="main__nav">
             <ul class="row end-xs main-nav__list">
@@ -18,10 +18,8 @@
             </ul>
         </nav>
     </header>
-    <?php $cover = get_theme_root_uri().'/Jeanne/images/cover_home.jpg'?>
-    <div class="row front-cover" style="background-image: url('<?php echo $cover ?>')">
+    <div class="row front-cover" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
         <h2 class="front-cover__name">Jeanne Plounevez</h2>
         <h3 class="front-cover__job">Dessinatrice Freelance</h3>
     </div>
-    <!-- end is_front_page -->
-    <? //endif ?>
+    <?php } ?>

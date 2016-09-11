@@ -16,16 +16,29 @@
       height: 35px;
       display: flex;
       align-items: center;
-      padding: 0 15px;
+      padding: 0 @main-nav-padding;
+      font-family: @font;
+      letter-spacing: 0.03rem;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        display: block;
+        height: 2px;
+        transition: width .4s;
+        background-color: white;
+      }
+      &:hover:after {
+        width: calc(~'100% - @{main-nav-padding}*2');
+      }
       a {
         color: inherit;
         outline: 0;
         text-transform: none;
         color: white;
         font-size: 14px;
-      }
-      &::before {
-        content: '';
       }
     }
   }
@@ -44,11 +57,17 @@
   flex-direction: column;
   color: white;
   &__name {
-    font-size: 40px;
+    font-size: @main-title;
     margin: 0 0 20px 0;
+    font-family: @font-semiBold;
+    letter-spacing: 0.04rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
   &__job {
-    font-size: 35px;
+    font-size: calc(~"@{main-title} - 23px");
     margin: 0;
+    font-family: @font-semiBold;
+    letter-spacing: 0.04rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
 }
