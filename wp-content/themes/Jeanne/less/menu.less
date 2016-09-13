@@ -1,0 +1,59 @@
+.menu-toggler {
+  position: fixed;
+  top: 25px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  &__label {
+    color: white;
+    font-family: @font;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform .35s;
+    &:hover {
+      transform: rotate(-180deg);
+    }
+    &:hover .hamburger__item--top {
+      transform: translate3d(12px,3px,0) rotate3d(0, 0, 1, 45deg);
+      width: 15px;
+    }
+    &:hover .hamburger__item--bottom {
+      transform: translate3d(12px,-3px,0) rotate3d(0, 0, 1, -45deg);
+      width: 15px;
+    }
+    &__item {
+      width: 25px;
+      height: 2px;
+      background-color: white;
+      top: 0;
+      left: 0;
+      transition: transform .35s, width .35s @easeInOutCubic;
+      &:not(:first-child) {
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+
+.nav-menu {
+  height: 100vh;
+  width: 40%;
+  max-width: 800px;
+  background-color: @black;
+  transform: translate3d(-100%,0,0);
+  position: fixed;
+  transition: transform .35s @easeOutCubic;
+  &--is-open {
+    transform: translate3d(0,0,0);
+  }
+  &--preview {
+    transform: translate3d(calc(~'-100% + 20px'),0,0);
+  }
+}

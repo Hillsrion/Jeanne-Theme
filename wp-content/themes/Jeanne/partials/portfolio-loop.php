@@ -1,3 +1,4 @@
+<section class="row main-container">
 <?php
 $args = array( 'post_type' => 'dessins', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
@@ -7,3 +8,4 @@ while ($loop->have_posts()) : $loop->the_post();
     the_content();
     echo '</div>';
 endwhile; ?>
+</section>

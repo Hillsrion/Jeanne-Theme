@@ -8,16 +8,29 @@
 </head>
 <body <?php body_class(); ?>>
     <?php if(is_front_page()) { ?>
-    <header class="header header--absolute">
-        <nav class="main__nav">
-            <ul class="row end-xs main-nav__list">
-                <li class="main-nav__item"><a href="">À propos de moi</a></li>
-                <li class="main-nav__item"><a href="">Mes services</a></li>
-                <li class="main-nav__item"><a href="">Commissions</a></li>
-                <li class="main-nav__item"><a href="">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!--    <header class="header header--absolute">-->
+<!--        <nav class="main__nav">-->
+<!--            <ul class="row end-xs main-nav__list">-->
+<!--                <li class="main-nav__item"><a href="">À propos de moi</a></li>-->
+<!--                <li class="main-nav__item"><a href="">Mes services</a></li>-->
+<!--                <li class="main-nav__item"><a href="">Commissions</a></li>-->
+<!--                <li class="main-nav__item"><a href="">Contact</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </header>-->
+    <div class="menu-toggler">
+        <div class="hamburger">
+            <span class="hamburger__item hamburger__item--top"></span>
+            <span class="hamburger__item hamburger__item--center"></span>
+            <span class="hamburger__item hamburger__item--bottom"></span>
+        </div>
+        <div class="menu-toggler__label">
+            <span>Menu</span>
+        </div>
+    </div>
+    <div class="nav-menu">
+
+    </div>
     <div class="row front-cover" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
         <h2 class="front-cover__name">Jeanne Plounevez</h2>
         <h3 class="front-cover__job">Dessinatrice Freelance</h3>
