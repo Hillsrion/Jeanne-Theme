@@ -1,29 +1,80 @@
+
 .menu-toggler {
   position: fixed;
   top: 25px;
   left: 30px;
   display: flex;
   align-items: center;
+  z-index: 1;
   &__label {
+    @transition--transform: .5s;
+    @transition--opacity: @transition--transform;
+    @easing: @easeOutCirc;
+    @delay: 0.1s;
     color: white;
     font-family: @font;
     text-transform: uppercase;
     font-size: 12px;
     margin-left: 15px;
+    position: relative;
+    min-width: 130px;
+    span {
+      display: block;
+      transition: transform @transition--transform @easing @delay,
+                  opacity @transition--transform @easing @delay;
+    }
+    &::after,&::before {
+      content: attr(data-preview);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translate3d(0,100%,0);
+      transition: transform @transition--transform @easing @delay,
+                  opacity @transition--opacity @easing @delay;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+    &::before {
+      content: attr(data-opened);
+    }
+    &--preview {
+      span {
+        transform: translate3d(0,-15px,0);
+        opacity: 0;
+      }
+      &::after {
+        transform: translate3d(0,calc(~'100% - 15px'),0);
+        opacity: 1;
+      }
+    }
+    &--opened-menu {
+      span {
+        transform: translate3d(0,-15px,0);
+        opacity: 0;
+      }
+      &::after {
+        transform: translate3d(0,calc(~'100% - 30px'),0);
+        opacity: 0;
+      }
+      &::before {
+        transform: translate3d(0,calc(~'100% - 15px'),0);
+        opacity: 1;
+      }
+    }
   }
   .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: transform .35s;
-    &:hover {
+    &:not(.hamburger--opened-menu):hover {
       transform: rotate(-180deg);
     }
-    &:hover .hamburger__item--top {
+    &:hover .hamburger__item--top:not(.hamburger__item--cross) {
       transform: translate3d(12px,3px,0) rotate3d(0, 0, 1, 45deg);
       width: 15px;
     }
-    &:hover .hamburger__item--bottom {
+    &:hover .hamburger__item--bottom:not(.hamburger__item--cross) {
       transform: translate3d(12px,-3px,0) rotate3d(0, 0, 1, -45deg);
       width: 15px;
     }
@@ -33,9 +84,25 @@
       background-color: white;
       top: 0;
       left: 0;
-      transition: transform .35s, width .35s @easeInOutCubic;
+      transition: transform .35s,
+                  width .35s @easeInOutCubic,
+                  opacity .2s;
       &:not(:first-child) {
         margin-top: 6px;
+      }
+      &--cross {
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+        &.hamburger__item--top {
+          transform: translate3d(0,2px,0) rotate3d(0, 0, 1, -45deg);
+        }
+        &.hamburger__item--center {
+          opacity: 0;
+        }
+        &.hamburger__item--bottom {
+          transform: translate3d(0,-2px,0) rotate3d(0, 0, 1, 45deg);
+        }
       }
     }
   }
@@ -49,11 +116,79 @@
   background-color: @black;
   transform: translate3d(-100%,0,0);
   position: fixed;
-  transition: transform .35s @easeOutCubic;
+  transition: transform 0.6s @easeOutCubic;
+  margin: 0;
   &--is-open {
     transform: translate3d(0,0,0);
   }
-  &--preview {
+  &--preview:not(&--is-open) {
     transform: translate3d(calc(~'-100% + 20px'),0,0);
+  }
+  &__main {
+
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    // Aligned w/ the menu-toggler label.
+    padding-left: 70px;
+  }
+  &__item {
+    flex-basis: 100%;
+    font-family: @font;
+    font-size: 27px;
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .link {
+      position: relative;
+      color: darken(@grey,15%);
+      display: flex;
+      &::before {
+        content: '';
+        // I want to be 35 but i have to give a negative left
+        width: 50px;
+        background-color: white;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: -15px;
+        bottom: -20px;
+        transform: scaleX(0);
+        transform-origin: top left;
+        transition: transform .45s @easeOutQuart;
+      }
+      &__overlay {
+        position: absolute;
+        transition: transform .4s @easeOutQuart;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate3d(-100%,0,0);
+      }
+      &__mask {
+        color: white;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        transform: translate3d(100%,0,0);
+        transition: transform .4s @easeOutQuart;
+      }
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+        .link__overlay {
+          transform: translate3d(0,0,0);
+        }
+        .link__mask {
+          transform: translate3d(0,0,0);
+        }
+      }
+    }
   }
 }

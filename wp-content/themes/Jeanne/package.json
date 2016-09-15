@@ -1,8 +1,11 @@
 {
   "author": "Ismaël Sebbane",
   "devDependencies": {
+    "babelify": "^7.3.0",
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^2.0.10",
     "gulp-header": "^1.8.7",
     "gulp-less": "^3.1.0",

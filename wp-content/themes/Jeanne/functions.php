@@ -18,10 +18,10 @@ function generic_load_scripts()
 {
 //wp_enqueue_style( 'generic-style', get_stylesheet_uri() );
 wp_enqueue_script( 'jquery' );
-wp_register_script( 'generic-videos', get_template_directory_uri() . '/js/videos.js' );
-wp_enqueue_script( 'generic-videos' );
+// wp_register_script( 'generic-videos', get_template_directory_uri() . '/js/videos.js' );
+// wp_enqueue_script( 'generic-videos' );
 }
-add_action( 'wp_head', 'generic_print_custom_scripts', 99 );
+//add_action( 'wp_head', 'generic_print_custom_scripts', 99 );
 function generic_print_custom_scripts()
 {
 if ( !is_admin() ) {
