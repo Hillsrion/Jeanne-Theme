@@ -22,7 +22,7 @@
         <nav class="nav-menu__main">
             <ul class="row nav-menu__list">
                 <li class="nav-menu__item">
-                    <a class="link" data-name="À propos de moi" href="">
+                    <a class="link" href="">
                         <span class="link__initial">À propos de moi</span>
                         <span class="link__overlay">
                             <span class="link__mask">À propos de moi</span>
@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="nav-menu__item">
-                    <a class="link" data-name="À propos de moi" href="">
+                    <a class="link" href="">
                         <span class="link__initial">Mes services</span>
                         <span class="link__overlay">
                             <span class="link__mask">Mes services</span>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-menu__item">
-                    <a class="link" data-name="À propos de moi" href="">
+                    <a class="link" href="">
                         <span class="link__initial">Commissions</span>
                         <span class="link__overlay">
                             <span class="link__mask">Commissions</span>
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="nav-menu__item">
-                    <a class="link" data-name="À propos de moi" href="">
+                    <a class="link" href="">
                         <span class="link__initial">Boutique</span>
                         <span class="link__overlay">
                             <span class="link__mask">Boutique</span>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-menu__item">
-                    <a class="link" data-name="À propos de moi" href="">
+                    <a class="link" href="">
                         <span class="link__initial">Contact</span>
                         <span class="link__overlay">
                             <span class="link__mask">Contact</span>

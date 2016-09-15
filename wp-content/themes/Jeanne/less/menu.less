@@ -149,20 +149,20 @@
       &::before {
         content: '';
         // I want to be 35 but i have to give a negative left
-        width: 50px;
+        width: 35px;
         background-color: white;
         height: 4px;
         display: block;
         position: absolute;
-        left: -15px;
+        left: 0;
         bottom: -20px;
         transform: scaleX(0);
         transform-origin: top left;
-        transition: transform .45s @easeOutQuart;
+        transition: transform .4s @easeInOutQuart;
       }
       &__overlay {
         position: absolute;
-        transition: transform .4s @easeOutQuart;
+        transition: transform .35s @easeInOutQuart;
         overflow: hidden;
         width: 100%;
         height: 100%;
@@ -176,7 +176,7 @@
         position: absolute;
         left: 0;
         transform: translate3d(100%,0,0);
-        transition: transform .4s @easeOutQuart;
+        transition: transform .35s @easeInOutQuart;
       }
       &:hover {
         &::before {
