@@ -63,11 +63,21 @@
                 </li>
             </ul>
         </nav>
+        <div class="nav-menu__socials">
+            <nav class="socials-nav">
+                <ul class="socials-nav__list">
+                    <li class="socials-nav__item"></li>
+                    <li class="socials-nav__item"></li>
+                    <li class="socials-nav__item"></li>
+                </ul>
+            </nav>
+        </div>
     </div>
+    <!-- <div class="loading-page"></div> -->
     <div class="global-container">
         <div class="global-container__wrapper">
             <div class="global-container__overlay"></div>
-            <div class="row front-cover" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
+            <div class="front-cover" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
                 <h2 class="front-cover__name">Jeanne Plounevez</h2>
                 <h3 class="front-cover__job">Dessinatrice Freelance</h3>
             </div>

@@ -26,6 +26,7 @@
         this.clickListener();
     };
     menu.prototype.hoverListener = function () {
+        // FIXME: Tu vas me faire le plaisir d'enlever cette merde, t'as cru c'était la foire ?
         this.$hamburger.on('mouseenter',this.preview.bind(this));
         this.$hamburger.on('mouseleave',this.previewOff.bind(this));
     };
