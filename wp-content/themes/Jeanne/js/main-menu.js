@@ -22,16 +22,10 @@
         this.init();
     };
     menu.prototype.init = function () {
-        this.hoverListener();
         this.clickListener();
     };
-    menu.prototype.hoverListener = function () {
-        // FIXME: Tu vas me faire le plaisir d'enlever cette merde, t'as cru c'était la foire ?
-        this.$hamburger.on('mouseenter',this.preview.bind(this));
-        this.$hamburger.on('mouseleave',this.previewOff.bind(this));
-    };
     menu.prototype.clickListener = function () {
-        this.$toggler.click(this.onClick.bind(this));
+        this.$toggler.on('click',this.onClick.bind(this));
     }
     menu.prototype.onClick = function () {
         if(this.isOpen==false) {
@@ -81,4 +75,5 @@
         this.$label.removeClass(this.label+'--preview');
     };
     var menuObj = new menu();
+    ns.app = menuObj
 })(window.jQuery,window);

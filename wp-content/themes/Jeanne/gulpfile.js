@@ -50,7 +50,7 @@ gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 // Configure the browserSync task
 gulp.task('browserSync', function() {
     browserSync.init({
-        proxy: 'localhost/vitrine'
+        proxy: 'jeanneportfolio'
     })
 })
 

@@ -5,7 +5,7 @@
   left: 30px;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   &__label {
     @duration: .5s;
     @delay: 0.1s;
@@ -38,6 +38,9 @@
     &::before {
       content: attr(data-opened);
     }
+    &:hover + .nav-menu:not(.nav-menu--is-open) {
+      transform: translate3d(calc(~'-100% + 20px'),0,0);
+    }
     &--preview {
       span {
         transform: translate3d(0,-15px,0);
@@ -63,61 +66,68 @@
       }
     }
   }
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform .35s;
-    &:not(.hamburger--opened-menu):hover {
-      transform: rotate(-180deg);
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform .35s;
+  &:not(.hamburger--opened-menu):hover {
+    transform: rotate(-180deg);
+  }
+  &:hover .hamburger__item--top:not(.hamburger__item--cross) {
+    transform: translate3d(12px,3px,0) rotate3d(0, 0, 1, 45deg);
+    width: 15px;
+  }
+  &:hover .hamburger__item--bottom:not(.hamburger__item--cross) {
+    transform: translate3d(12px,-3px,0) rotate3d(0, 0, 1, -45deg);
+    width: 15px;
+  }
+  &__item {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    transition: transform .35s,
+                width .35s @easeInOutCubic,
+                opacity .2s;
+    &:not(:first-child) {
+      margin-top: 6px;
     }
-    //FIXME: Tester de mettre ça dans le scope des sélecteurs touchés.
-    &:hover .hamburger__item--top:not(.hamburger__item--cross) {
-      transform: translate3d(12px,3px,0) rotate3d(0, 0, 1, 45deg);
-      width: 15px;
-    }
-    &:hover .hamburger__item--bottom:not(.hamburger__item--cross) {
-      transform: translate3d(12px,-3px,0) rotate3d(0, 0, 1, -45deg);
-      width: 15px;
-    }
-    &__item {
-      width: 25px;
-      height: 2px;
-      background-color: white;
-      top: 0;
-      left: 0;
-      transition: transform .35s,
-                  width .35s @easeInOutCubic,
-                  opacity .2s;
+    &--cross {
       &:not(:first-child) {
-        margin-top: 6px;
+        margin-top: 0;
       }
-      &--cross {
-        &:not(:first-child) {
-          margin-top: 0;
-        }
-        &.hamburger__item--top {
-          transform: translate3d(0,2px,0) rotate3d(0, 0, 1, -45deg);
-        }
-        &.hamburger__item--center {
-          opacity: 0;
-        }
-        &.hamburger__item--bottom {
-          transform: translate3d(0,-2px,0) rotate3d(0, 0, 1, 45deg);
-        }
+      &.hamburger__item--top {
+        transform: translate3d(0,2px,0) rotate3d(0, 0, 1, -45deg);
+      }
+      &.hamburger__item--center {
+        opacity: 0;
+      }
+      &.hamburger__item--bottom {
+        transform: translate3d(0,-2px,0) rotate3d(0, 0, 1, 45deg);
       }
     }
   }
 }
+
 .nav-menu {
   height: 100vh;
-  width: 40%;
-  max-width: 800px;
+  // +1px to fill the weird gap between the cover and the menu
+  width: calc(~'@{menu-lg-size} + 1px');
   background-color: @black;
   transform: translate3d(-100%,0,0);
   position: fixed;
   transition: transform 0.6s @easeOutCubic;
   margin: 0;
+  z-index: 1;
+  @media screen and (max-width: @desktop-min) {
+    width: calc(~'@{menu-sm-size} + 1px');
+  }
+  @media screen and (max-width: @tablet-min) {
+    width: calc(~'100% + 1px');
+  }
   &--is-open {
     transform: translate3d(0,0,0);
   }

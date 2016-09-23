@@ -18,61 +18,7 @@
             <span>Menu</span>
         </div>
     </div>
-    <div class="row middle-xs nav-menu">
-        <nav class="nav-menu__main">
-            <ul class="row nav-menu__list">
-                <li class="nav-menu__item">
-                    <a class="link" href="">
-                        <span class="link__initial">À propos de moi</span>
-                        <span class="link__overlay">
-                            <span class="link__mask">À propos de moi</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-menu__item">
-                    <a class="link" href="">
-                        <span class="link__initial">Mes services</span>
-                        <span class="link__overlay">
-                            <span class="link__mask">Mes services</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-menu__item">
-                    <a class="link" href="">
-                        <span class="link__initial">Commissions</span>
-                        <span class="link__overlay">
-                            <span class="link__mask">Commissions</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-menu__item">
-                    <a class="link" href="">
-                        <span class="link__initial">Boutique</span>
-                        <span class="link__overlay">
-                            <span class="link__mask">Boutique</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-menu__item">
-                    <a class="link" href="">
-                        <span class="link__initial">Contact</span>
-                        <span class="link__overlay">
-                            <span class="link__mask">Contact</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="nav-menu__socials">
-            <nav class="socials-nav">
-                <ul class="socials-nav__list">
-                    <li class="socials-nav__item"></li>
-                    <li class="socials-nav__item"></li>
-                    <li class="socials-nav__item"></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <?php get_template_part('partials/main-menu') ?>
     <!-- <div class="loading-page"></div> -->
     <div class="global-container">
         <div class="global-container__wrapper">
