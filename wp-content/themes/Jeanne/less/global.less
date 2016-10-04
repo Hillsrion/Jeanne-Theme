@@ -37,10 +37,10 @@ html {
         transition: transform 0.6s @easeOutCubic;
         &--opened-menu {
             transform: translate3d(@menu-lg-size,0,0);
-            @media screen and (max-width: @desktop-min) {
+            @media screen and (max-width: @desktop) {
                 transform: translate3d(@menu-sm-size,0,0);
             }
-            @media screen and (max-width: @tablet-min) {
+            @media screen and (max-width: @tablet) {
                 transform: translate3d(100%,0,0);
             }
         }

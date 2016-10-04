@@ -2,5 +2,9 @@
 // require('./lib/CSSPlugin.min.js');
 // require('./lib/EasePack.min.js');
 // require('./lib/TweenLite.min.js');
+
 // Components
-require('./main-menu.js');
+require('./components/main-menu.js');
+
+// Animations
+require('./animations/loading.js')

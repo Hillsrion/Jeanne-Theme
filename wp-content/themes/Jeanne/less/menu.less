@@ -122,10 +122,10 @@
   transition: transform 0.6s @easeOutCubic;
   margin: 0;
   z-index: 1;
-  @media screen and (max-width: @desktop-min) {
+  @media screen and (max-width: @desktop) {
     width: calc(~'@{menu-sm-size} + 1px');
   }
-  @media screen and (max-width: @tablet-min) {
+  @media screen and (max-width: @tablet) {
     width: calc(~'100% + 1px');
   }
   &--is-open {
@@ -156,6 +156,11 @@
       position: relative;
       color: @grey--dark;
       display: flex;
+      transform: translate3d(0,70px,0);
+      transition: transform 1.3s @easeOutCirc .2s;
+      &--is-visible {
+        transform: translate3d(0,0,0);
+      }
       &::before {
         content: '';
         width: 35px;

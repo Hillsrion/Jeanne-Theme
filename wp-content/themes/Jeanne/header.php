@@ -14,12 +14,12 @@
             <span class="hamburger__item hamburger__item--center"></span>
             <span class="hamburger__item hamburger__item--bottom"></span>
         </div>
-        <div class="menu-toggler__label" data-preview="Ouvrir le menu" data-opened="Fermer le menu">
+        <div class="menu-toggler__label" data-opened="Fermer le menu">
             <span>Menu</span>
         </div>
     </div>
     <?php get_template_part('partials/main-menu') ?>
-    <!-- <div class="loading-page"></div> -->
+    <?php get_template_part('partials/loading-animation') ?>
     <div class="global-container">
         <div class="global-container__wrapper">
             <div class="global-container__overlay"></div>
