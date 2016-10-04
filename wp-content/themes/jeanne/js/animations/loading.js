@@ -9,11 +9,11 @@
     this.el = 'loading-page';
     this.$el = $('.'+this.el);
     this.$nameItems = $('.name__item',this.$el);
-    this.tl = new TimelineMax();
+    this.tl = new TimelineLite();
   }
 
   loadingSite.fillTimeline = function () {
-    this.tl.add(TweenMax.to(this.$nameItems,0.85,{x:0,delay:0.7,ease:Expo.easeOut}));
+    this.tl.add(TweenLite.to(this.$nameItems,0.85,{x:0,delay:0.7,ease:Expo.easeOut}));
   }
 
   loadingSite.init();
