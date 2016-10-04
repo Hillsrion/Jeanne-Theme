@@ -69,5 +69,7 @@
             this.$label.removeClass(this.label+'--opened-menu');
         }
     };
-    menu.init();
-})(window.jQuery,window);
+    ns.app = ns.app || {};
+    ns.app.menu = menu;
+    ns.app.menu.init();
+})(window.Zepto,window);

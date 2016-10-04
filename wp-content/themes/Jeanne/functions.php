@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'generic_load_scripts' );
 function generic_load_scripts()
 {
 //wp_enqueue_style( 'generic-style', get_stylesheet_uri() );
-wp_enqueue_script( 'jquery' );
+//wp_enqueue_script( 'jquery' );
 // wp_register_script( 'generic-videos', get_template_directory_uri() . '/js/videos.js' );
 // wp_enqueue_script( 'generic-videos' );
 }

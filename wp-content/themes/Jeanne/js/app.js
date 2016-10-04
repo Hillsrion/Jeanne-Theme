@@ -7,4 +7,4 @@
 require('./components/main-menu.js');
 
 // Animations
-require('./animations/loading.js')
+require('./animations/loading.js');
