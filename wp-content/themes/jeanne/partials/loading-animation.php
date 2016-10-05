@@ -1,5 +1,5 @@
 
-<div class="loading-page">
+<div class="row loading-page">
     <div class="name name--pre">
         <span class="name__wrapper"><span class="name__item">J</span></span>
         <span class="name__wrapper"><span class="name__item">e</span></span>
