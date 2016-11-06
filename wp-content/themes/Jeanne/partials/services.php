@@ -1,5 +1,4 @@
-<div class="row center-xs services">
-    <h2 class="col-xs-12 services__title">Mes services</h2>
+<section class="row center-xs services">
     <div class="col-md-10 col-xs-12 services__list">
         <div class="row">
             <div class="col-xs service">
@@ -13,4 +12,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

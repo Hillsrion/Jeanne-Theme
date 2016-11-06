@@ -2,11 +2,14 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: darken(@blue,10%);
+  background-color: @black;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  &--loaded {
+    display: none;
+  }
   &__group {
     display: flex;
   }
@@ -17,23 +20,6 @@
   }
 }
 
-.name {
-  color: white;
-  font-size: 60px;
-  display: flex;
-  position: relative;
-  &--pre {
-    margin-right: 15px;
-  }
-  &__wrapper {
-    overflow: hidden;
-    display: block;
-  }
-  &__item {
-    display: block;
-    transform: translate3d(-50px,0,0);
-  }
-}
 
 .loading-bar {
   display: flex;

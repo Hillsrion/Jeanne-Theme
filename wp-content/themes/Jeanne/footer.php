@@ -6,13 +6,13 @@
         </div>
     <!-- end .global-container  -->
     </div>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
-    <!-- <script src="<?= get_stylesheet_directory_uri() ?>/js/app.min.js"></script> -->
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/zepto.js"></script>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/components/main-menu.js"></script>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/animations/loading.js"></script>
-</body>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/CSSPlugin.min.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/EasePack.min.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/TweenLite.min.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/TimelineLite.min.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/lib/zepto.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/components/main-menu.js"></script>
+        <script src="<?= get_stylesheet_directory_uri() ?>/js/animations/loading.js"></script>
+<!--        <script src="--><?//= get_stylesheet_directory_uri() ?><!--/js/app.min.js"></script>-->
+    </body>
 </html>

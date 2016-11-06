@@ -1,6 +1,6 @@
 
 (function ($,ns) {
-    var menu = function () {};
+    var menu = {};
     menu.init = function () {
         this.defineProps();
         this.clickListener();
@@ -23,8 +23,6 @@
         this.isOpen = false;
         this.isOpening = false;
         this.isClosing = false;
-        // Helpers
-        this.helpers = {};
     }
     menu.clickListener = function () {
         this.$toggler.on('click',this.onClick.bind(this));
@@ -42,6 +40,7 @@
         // Opening hamburger menu.
         this.$hamburger.addClass('hamburger--opened-menu');
         this.$hamburger.find('.hamburger__item').addClass('hamburger__item--cross');
+        this.$label.addClass(this.label+"--opened");
         // Adding classes on main elements to put them aside while menu is open.
         this.$globalContainer.find('.'+this.globalContainer+'__wrapper').addClass(this.globalContainer+'__wrapper--opened-menu');
         this.$globalContainer.find('.'+this.globalContainer+'__overlay').addClass(this.globalContainer+'__overlay--opened-menu');
@@ -55,6 +54,7 @@
         this.$el.removeClass(this.el+'--is-open');
         this.$hamburger.removeClass('hamburger--opened-menu');
         this.$hamburger.find('.hamburger__item').removeClass('hamburger__item--cross');
+        this.$label.removeClass(this.label+"--opened");
         this.$globalContainer.find('.'+this.globalContainer+'__wrapper').removeClass(this.globalContainer+'__wrapper--opened-menu');
         this.$globalContainer.find('.'+this.globalContainer+'__overlay').removeClass(this.globalContainer+'__overlay--opened-menu');
         this.$items.find('.link').removeClass('link--is-visible');

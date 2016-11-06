@@ -5,7 +5,6 @@ Template Name: Home
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part('partials/bio')?>
 <?php get_template_part('partials/services') ?>
 <?php get_template_part('partials/portfolio-loop'); ?>
 <?php get_template_part('partials/contact'); ?>

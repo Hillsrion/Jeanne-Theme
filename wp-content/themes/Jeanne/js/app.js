@@ -3,8 +3,9 @@
 // require('./lib/EasePack.min.js');
 // require('./lib/TweenLite.min.js');
 
+// require('./lib/zepto.js');
 // Components
-require('./components/main-menu.js');
+//require('./components/main-menu.js');
 
 // Animations
-require('./animations/loading.js');
+//require('./animations/loading.js');

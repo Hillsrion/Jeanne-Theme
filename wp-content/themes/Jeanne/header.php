@@ -23,8 +23,36 @@
     <div class="global-container">
         <div class="global-container__wrapper">
             <div class="global-container__overlay"></div>
-            <div class="front-cover" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
-                <h2 class="front-cover__name">Jeanne Plounevez</h2>
-                <h3 class="front-cover__job">Dessinatrice Freelance</h3>
-            </div>
+            <main class="row landing">
+                <div class="col-xs-5 row middle-xs center-xs landing__intro">
+                    <h1>
+                        <div class="name name--pre">
+                            <span class="name__wrapper"><span class="name__item">J</span></span>
+                            <span class="name__wrapper"><span class="name__item">e</span></span>
+                            <span class="name__wrapper"><span class="name__item">a</span></span>
+                            <span class="name__wrapper"><span class="name__item">n</span></span>
+                            <span class="name__wrapper"><span class="name__item">n</span></span>
+                            <span class="name__wrapper"><span class="name__item">e</span></span>
+                        </div>
+                        <div class="name name--last">
+                            <span class="name__wrapper"><span class="name__item">P</span></span>
+                            <span class="name__wrapper"><span class="name__item">l</span></span>
+                            <span class="name__wrapper"><span class="name__item">o</span></span>
+                            <span class="name__wrapper"><span class="name__item">u</span></span>
+                            <span class="name__wrapper"><span class="name__item">n</span></span>
+                            <span class="name__wrapper"><span class="name__item">e</span></span>
+                            <span class="name__wrapper"><span class="name__item">v</span></span>
+                            <span class="name__wrapper"><span class="name__item">e</span></span>
+                            <span class="name__wrapper"><span class="name__item">z</span></span>
+                        </div>
+                    </h1>
+                    <h2>Dessinatrice</h2>
+                    <div class="landing__scroll-picto">
+                        <span>Scroll</span>
+                    </div>
+                </div>
+                <div class="col-xs-7 landing__cover landing__cover--hidden" style="background-image: url('<?php echo the_post_thumbnail_url() ?>')">
+                    <div class="mask"></div>
+                </div>
+            </main>
     <?php } ?>

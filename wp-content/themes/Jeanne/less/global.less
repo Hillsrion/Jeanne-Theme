@@ -10,7 +10,9 @@ html {
 #wpadminbar {
     display: none !important;
 }
-
+.row--full {
+  height: 100%;
+}
 .global-container {
     margin: 0;
     padding: 0;
@@ -62,6 +64,23 @@ html {
     }
 }
 
+.name {
+  color: white;
+  font-size: 60px;
+  display: flex;
+  position: relative;
+  &--pre {
+    margin-right: 15px;
+  }
+  &__wrapper {
+    overflow: hidden;
+    display: block;
+  }
+  &__item {
+    display: block;
+    transform: translate3d(-50px,0,0);
+  }
+}
 
 // Generic classes
 
