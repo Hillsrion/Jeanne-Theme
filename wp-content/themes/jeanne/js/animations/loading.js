@@ -48,7 +48,10 @@
       this.tl.add(TweenLite.to(this.$nameItemsCover,0.75,{x:0,ease:Expo.easeOut,force3D:true,onComplete: this.finishEntry.bind(this)}));
     } else {
       this.tl.add(TweenLite.to(coverMask,1,{y: -coverMask.height(),ease: Power4.easeInOut,force3D:true, delay:0.3}));
-      this.tl.add(TweenLite.to(this.$nameItemsCover,0.6,{x:0,ease:Expo.easeOut,force3D:true,onComplete: this.finishEntry.bind(this)}));
+      this.tl.add(TweenLite.to(coverMask,.75,{y: -coverMask.height(),ease: Power4.easeInOut,force3D:true,delay:0.15, onStart: function () {
+        TweenLite.to(cover,1,{y:0,ease:Power3.easeInOut,force3D:true})
+      }}));
+      this.tl.add(TweenLite.to(this.$nameItemsCover,0.75,{x:0,ease:Expo.easeOut,force3D:true,onComplete: this.finishEntry.bind(this)}));
     }
   }
   loadingSite.finishEntry = function () {

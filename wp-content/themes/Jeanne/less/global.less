@@ -100,3 +100,16 @@ html {
       background-color: @blue;
     }
 }
+
+.max-size {
+  @media screen and (min-width: @maxi-size) {
+    max-width: @maxi-size;
+  }
+}
+
+.parent-cap {
+  @media screen and (min-width: @maxi-size) {
+    display: flex;
+    justify-content: center;
+  }
+}

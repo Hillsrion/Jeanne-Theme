@@ -19,17 +19,9 @@
             </li>
             <li class="nav-menu__item">
                 <a class="link" href="">
-                    <span class="link__initial">Commissions</span>
+                    <span class="link__initial">Portfolio</span>
                     <span class="link__overlay">
-                        <span class="link__mask">Commissions</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-menu__item">
-                <a class="link" href="">
-                    <span class="link__initial">Boutique</span>
-                    <span class="link__overlay">
-                        <span class="link__mask">Boutique</span>
+                        <span class="link__mask">Portfolio</span>
                     </span>
                 </a>
             </li>
