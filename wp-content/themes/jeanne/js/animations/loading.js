@@ -18,15 +18,15 @@
     this.$jobName = $('h2',this.intro);
     this.$loadingFill = $('.loading-bar__fill span',this.$el);
     this.enabled = true;
-    this.tl = new TimelineLite();
+    this.tl = new TimelineLite({paused: true});
     this.$window = $(window);
     this.$windowWidth = this.$window.width();
     this.$windowHeight = this.$window.height();
-  }
+  };
 
-    loadingSite.removeLoadingAnimation = function () {
-      this.$el.addClass(this.el+'--loaded').remove();
-    }
+  loadingSite.removeLoadingAnimation = function () {
+  this.$el.addClass(this.el+'--loaded').remove();
+  };
   // Fills the timeline.
   loadingSite.entry = function () {
     var fillContainer = this.$loadingFill.parent();

@@ -1,11 +1,11 @@
-// Lib
-// require('./lib/CSSPlugin.min.js');
-// require('./lib/EasePack.min.js');
-// require('./lib/TweenLite.min.js');
+import
 
-// require('./lib/zepto.js');
-// Components
-//require('./components/main-menu.js');
+const App = (function () {
+    class Application {
+        constructor() {
 
-// Animations
-//require('./animations/loading.js');
+        }
+    }
+    let App = new Application();
+    return App;
+}());
