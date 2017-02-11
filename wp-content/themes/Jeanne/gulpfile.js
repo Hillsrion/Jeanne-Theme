@@ -47,7 +47,7 @@ gulp.task('sass', function() {
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: ''
+            proxy: 'local.jeanne'
         }
     })
 });
@@ -56,7 +56,7 @@ gulp.task('browserSync', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
     return gulp.src(conf.src.css)
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(cleanCSS({ compatibility: 'ie10' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(conf.dest.css))
         .pipe(browserSync.reload({
@@ -91,10 +91,4 @@ gulp.task('dev', ['browserSync','sass', 'minify-css', 'minify-js'], function() {
     gulp.watch(conf.watch.scss, ['sass']);
     gulp.watch(conf.watch.css, ['minify-css']);
     gulp.watch(conf.watch.js, ['minify-js']);
-    gulp.watch("js/Views/*.js", ['minify-js']);
-    gulp.watch("js/Views/**/*.js", ['minify-js']);
-    gulp.watch("templates/*.html", ['minify-js']);
-    gulp.watch("templates/**/*.html", ['minify-js']);
-    gulp.watch("js/Collections/*.js", ['minify-js']);
-    gulp.watch("js/Models/*.js", ['minify-js']);
 });

@@ -1,17 +1,37 @@
 // Variables
-@import "variables/colors";
-@import "variables/dimensions";
-@import "variables/typography";
-@import "variables/animations";
+@import "variables/colors/colors";
+@import "variables/dimensions/dimensions";
+@import "variables/typography/typography";
+@import "variables/positions/positions";
+@import "variables/easings/easings";
+@import "variables/breakpoints/breakpoints";
+@import "variables/layers/layers";
 
 // Vendor
+@import "vendor/normalize/normalize";
+@import "vendor/flexboxgrid/flexboxgrid";
+@import "vendor/family/family";
+@import "vendor/include-media/include-media";
 
 // Utils
-@import "utils/mixins";
-@import "utils/placeholders";
+@import "utils/mixins/mixins";
+@import "utils/animations/animations";
+@import "utils/placeholders/placeholders";
+@import "utils/fonts/fonts";
+
+// Base
+@import "base/global/global";
 
 // Layout
+@import "layout/services/services";
+@import "layout/bio/bio";
+@import "layout/contact/contact";
 
 // UI
+@import "ui/menu/menu";
+@import "ui/header/header";
+@import "ui/footer/footer";
+@import "ui/collection/collection";
+@import "ui/loading/loading";
 
 
