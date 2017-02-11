@@ -11,8 +11,8 @@
       height: 35px;
       display: flex;
       align-items: center;
-      padding: 0 @main-nav-padding;
-      font-family: @font;
+      padding: 0 $main-nav-padding;
+      font-family: $font;
       letter-spacing: 0.03rem;
       position: relative;
       &:after {
@@ -26,7 +26,7 @@
         background-color: white;
       }
       &:hover:after {
-        width: calc(~'100% - @{main-nav-padding}*2');
+        width: calc(100% - #{$main-nav-padding}*2);
       }
       a {
         color: inherit;
@@ -56,7 +56,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-color: @bg-body;
+      background-color: $bg-body;
       display: block;
     }
   }
@@ -64,9 +64,9 @@
     flex-direction: column;
     position: relative;
     h1 {
-      font-size: @main-title;
+      font-size: $main-title;
       margin: 0 0 10px 0;
-      font-family: @font-semiBold;
+      font-family: $font-semiBold;
       letter-spacing: 0.04rem;
       display: flex;
       .name {
@@ -78,13 +78,13 @@
       }
     }
     h2 {
-      font-size: calc(~"@{main-title} - 15px");
+      font-size: calc(#{$main-title} - 15px);
       margin: 0;
-      font-family: @font-semiBold;
+      font-family: $font-semiBold;
       letter-spacing: 0.04rem;
       transform: translate3d(0,10px,0);
       opacity: 0;
-      transition: transform 0.4s @easeOutQuart, opacity 0.45s @easeOutQuart;
+      transition: transform 0.4s $easeOutQuart, opacity 0.45s $easeOutQuart;
       &.reveal {
         opacity: 1;
         transform: translate3d(0,0,0);
@@ -118,7 +118,7 @@
       width: 1px;
       height: 22px;
       margin: 5px auto 0 auto;
-      background-color: @black;
+      background-color: $black;
     }
   }
 }
