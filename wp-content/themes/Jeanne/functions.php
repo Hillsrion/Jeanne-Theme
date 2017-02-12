@@ -13,26 +13,25 @@ register_nav_menus(
 array( 'main-menu' => __( 'Main Menu', 'generic' ) )
 );
 }
-add_action( 'wp_enqueue_scripts', 'generic_load_scripts' );
-function generic_load_scripts()
+add_action( 'wp_footer', 'load_scripts' );
+function load_scripts()
 {
-//wp_enqueue_style( 'generic-style', get_stylesheet_uri() );
-//wp_enqueue_script( 'jquery' );
-// wp_register_script( 'generic-videos', get_template_directory_uri() . '/js/videos.js' );
-// wp_enqueue_script( 'generic-videos' );
+    if(WP_ENV=="dev") {
+        wp_register_script( 'app', get_template_directory_uri() . '/js/build/app.js' );
+    } else if (WP_ENV=="prod") {
+        wp_register_script( 'app', get_template_directory_uri() . '/js/build/app.min.js' );
+    }
+    wp_enqueue_script( 'app' );
 }
-//add_action( 'wp_head', 'generic_print_custom_scripts', 99 );
-function generic_print_custom_scripts()
-{
-if ( !is_admin() ) {
-?>
-<script type="text/javascript">
-jQuery(document).ready(function($){
-$("#wrapper").vids();
-});
-</script>
-<?php
-}
+add_action( 'wp_head', 'load_styles');
+function load_styles() {
+    if(WP_ENV=="dev") {
+        wp_register_style( 'app', get_template_directory_uri() . '/css/app.css' );
+    } else if (WP_ENV=="prod") {
+        wp_register_style( 'app', get_template_directory_uri() . '/css/app.min.css' );
+    }
+    wp_enqueue_style('app');
+
 }
 add_filter( 'document_title_separator', 'generic_document_title_separator' );
 function generic_document_title_separator( $sep ) {

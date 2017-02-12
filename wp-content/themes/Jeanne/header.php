@@ -4,7 +4,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <?php wp_head(); ?>
-<link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/app.css">
 </head>
 <body <?php body_class(); ?>>
     <?php if(is_front_page()) { ?>
