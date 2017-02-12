@@ -16,7 +16,7 @@ var browserSync = require('browser-sync').create();
 var stringify = require('stringify');
 var conf = {
     src: {
-        scss: 'scss/app.scss',
+        scss: 'sass/app.scss',
         css: 'css/app.css',
         js: 'js/app.js',
         bundle: 'bundle.js'
@@ -26,7 +26,7 @@ var conf = {
         js: 'js/build'
     },
     watch: {
-        scss: 'scss/**/*.scss',
+        scss: 'sass/**/*.scss',
         css: 'css/*.css',
         js: 'js/*.js'
     }
@@ -46,9 +46,7 @@ gulp.task('sass', function() {
 // Start Browsersync
 gulp.task('browserSync', function() {
     browserSync.init({
-        server: {
-            proxy: 'local.jeanne'
-        }
+        proxy: 'local.jeanne'
     })
 });
 
@@ -56,7 +54,7 @@ gulp.task('browserSync', function() {
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
     return gulp.src(conf.src.css)
-        .pipe(cleanCSS({ compatibility: 'ie10' }))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(conf.dest.css))
         .pipe(browserSync.reload({

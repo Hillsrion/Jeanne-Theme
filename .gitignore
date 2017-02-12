@@ -1,10 +1,9 @@
-node_modules/
 node_modules
-.idea/
 .idea
-fonts/
-images/
-css/
-wp-content/uploads/
+wp-content/themes/**/fonts
+wp-content/themes/**/images
+wp-content/themes/**/css
+wp-content/themes/**/js/build
 wp-content/uploads
-wp-content/themes/jeanne/js/app.min.js
+
+

@@ -1,7 +1,3 @@
-// Main colors
-$color--main: $blue;
-$color--secondary: $grey;
-
 $bg-body: #fafafa;
 
 // Blue
@@ -15,3 +11,7 @@ $grey--dark: darken($grey,15%);
 // Black
 $black: #333;
 $black--strong: darken($black,4%);
+
+// Main colors
+$color--main: $blue;
+$color--secondary: $grey;
