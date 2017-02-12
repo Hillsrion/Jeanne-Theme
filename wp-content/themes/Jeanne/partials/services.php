@@ -1,4 +1,4 @@
-<?php $imagesPath = '/wp-content/themes/jeanne/images/'  ?>
+<?php $imagesPath = '/wp-content/themes/Jeanne/images/'  ?>
 <section class="row center-xs services">
     <div class="col-md-10 col-xs-12 services__list">
         <div class="row max-size">

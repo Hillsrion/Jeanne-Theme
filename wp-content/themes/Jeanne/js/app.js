@@ -7,7 +7,9 @@ const App = (function () {
 
         }
         init() {
+            console.log(Loading);
             Loading.init();
+            Menu.init();
         }
     }
     let App = new Application();

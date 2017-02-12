@@ -1,10 +1,13 @@
+import $ from "jquery";
+import {TweenLite, TimelineLite,Expo, Power3,Power4} from 'gsap';
+//
 const Loading = (function () {
     class Loading {
         constructor() {
-
+			this.enabled = true;
         }
         init() {
-            this.defineProps();
+			this.defineProps();
             if(!this.enabled) {
               this.$el.remove();
               console.log("Entry animation disabled.");
@@ -34,8 +37,8 @@ const Loading = (function () {
 			const ratioY = (this.$windowHeight / fillContainer.height())*1.2;
 			const cover = $('.landing__cover');
 			const coverMask = $('.mask',cover);
-
 			if(this.enabled) {
+				this.tl.play();
 				this.tl.add(TweenLite.to(this.$nameItems,0.85,{x:0,delay:0.7,ease:Expo.easeOut,force3D:true}));
 				this.tl.add(TweenLite.to(this.$loadingFill,0.65,{scale:1, transformOrigin:"0px 0px",ease:Expo.easeInOut, delay: -0.3,force3D:true}));
 				this.tl.add(TweenLite.to(this.$nameItems,1.3,{x:50, ease:Expo.easeOut,force3D:true}));
