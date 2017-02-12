@@ -1,5 +1,4 @@
 
-(function ($,ns) {
     var menu = {};
     menu.init = function () {
         this.defineProps();
@@ -69,7 +68,3 @@
             this.$label.removeClass(this.label+'--opened-menu');
         }
     };
-    ns.app = ns.app || {};
-    ns.app.menu = menu;
-    ns.app.menu.init();
-})(window.Zepto,window);

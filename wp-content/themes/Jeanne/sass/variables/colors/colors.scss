@@ -1,0 +1,17 @@
+$bg-body: #fafafa;
+
+// Blue
+$blue: #60ceea;
+$blue--dark: #56b2cf;
+
+// Grey
+$grey: #dfdfdf;
+$grey--dark: darken($grey,15%);
+
+// Black
+$black: #333;
+$black--strong: darken($black,4%);
+
+// Main colors
+$color--main: $blue;
+$color--secondary: $grey;
