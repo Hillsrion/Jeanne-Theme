@@ -31,7 +31,6 @@ function load_styles() {
         wp_register_style( 'app', get_template_directory_uri() . '/css/app.min.css' );
     }
     wp_enqueue_style('app');
-
 }
 add_filter( 'document_title_separator', 'generic_document_title_separator' );
 function generic_document_title_separator( $sep ) {
